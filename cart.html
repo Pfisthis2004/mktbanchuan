@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css"> <!-- Liên kết file CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="cart-page">
+        <div class="cart-container">
+            <div class="cart-items">
+                <h2>Giỏ hàng</h2>
+                <p>Bạn có <span id="cart-items-count">0</span> sản phẩm trong giỏ hàng của bạn.</p>
+                <button class="continue-shopping" onclick="window.location.href='index.html'">&lt; Tiếp tục mua sắm</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body"></tbody>
+                </table>
+            </div>
+            <div class="order-summary">
+                <h2>Thanh toán</h2>
+                <label for="promo-code">Mã giảm giá</label>
+                <input type="text" id="promo-code" placeholder="Nhập mã giảm giá">
+                <button class="apply-btn">OK</button>
+                <hr>
+                <div class="totals">
+                    <div>
+                        <span>Giá</span>
+                        <span id="subtotal">0VND</span>
+                    </div>
+                    <div>
+                        <span>Áp mã giảm giá</span>
+                        <span id="total-discount">0VND</span>
+                    </div>
+                    <div>
+                        <span><strong>Tổng tiền</strong></span>
+                        <span id="total-price"><strong>0VND</strong></span>
+                    </div>
+                </div>
+                <button class="checkout-btn">Thanh toán bằng thẻ</button>
+                <p class="note">
+                    Xin lưu ý rằng các tệp đã mua không được hoàn lại. Tham khảo <a href="#">Điều khoản</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="webmohinh.js"></script> <!-- Đường dẫn JS -->
+    <script src="cart.js"></script>
+</body>
+</html>
